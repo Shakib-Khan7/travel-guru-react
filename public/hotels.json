@@ -1,0 +1,155 @@
+[
+    {
+        "hotel_name": "Grandview Resort",
+        "location": "New York",
+        "rating": 4.5,
+        "number_of_rooms": 200,
+        "img" : "../src/assets/images/Rectangle 26.png",
+        "amenities": ["Pool", "Gym", "Free WiFi", "Spa"],
+        "price_per_night": 250,
+        "occupancy_rate": 85,
+        "details": {
+            "guests": 4,
+            "bedrooms": 2,
+            "beds": 2,
+            "baths": 2
+        }
+    },
+    {
+        "hotel_name": "Seaside Inn",
+        "location": "Los Angeles",
+        "rating": 4.0,
+        "number_of_rooms": 150,
+        "img" : "../src/assets/images/Rectangle 27.png",
+        "amenities": ["Beach Access", "Free Breakfast", "Free WiFi"],
+        "price_per_night": 180,
+        "occupancy_rate": 90,
+        "details": {
+            "guests": 4,
+            "bedrooms": 2,
+            "beds": 2,
+            "baths": 2
+        }
+    },
+    {
+        "hotel_name": "Mountain Lodge",
+        "location": "Denver",
+        "rating": 4.8,
+        "number_of_rooms": 120,
+        "img" : "../src/assets/images/Rectangle 28.png",
+        "amenities": ["Ski-in/Ski-out", "Hot Tub", "Free Parking"],
+        "price_per_night": 300,
+        "occupancy_rate": 75,
+        "details": {
+            "guests": 4,
+            "bedrooms": 2,
+            "beds": 2,
+            "baths": 2
+        }
+    },
+    {
+        "hotel_name": "City Center Hotel",
+        "location": "Chicago",
+        "rating": 4.2,
+        "number_of_rooms": 250,
+        "amenities": ["Restaurant", "Gym", "Free WiFi", "Conference Rooms"],
+        "price_per_night": 220,
+        "occupancy_rate": 80,
+        "details": {
+            "guests": 4,
+            "bedrooms": 2,
+            "beds": 2,
+            "baths": 2
+        }
+    },
+    {
+        "hotel_name": "Tropical Paradise",
+        "location": "Miami",
+        "rating": 4.7,
+        "number_of_rooms": 180,
+        "amenities": ["Pool", "Beach Access", "Free Breakfast", "Spa"],
+        "price_per_night": 270,
+        "occupancy_rate": 88,
+        "details": {
+            "guests": 4,
+            "bedrooms": 2,
+            "beds": 2,
+            "baths": 2
+        }
+    },
+    {
+        "hotel_name": "Historic Inn",
+        "location": "Boston",
+        "rating": 4.3,
+        "number_of_rooms": 100,
+        "amenities": ["Free WiFi", "Restaurant", "Historic Tours"],
+        "price_per_night": 200,
+        "occupancy_rate": 82,
+        "details": {
+            "guests": 4,
+            "bedrooms": 2,
+            "beds": 2,
+            "baths": 2
+        }
+    },
+    {
+        "hotel_name": "Desert Oasis",
+        "location": "Phoenix",
+        "rating": 4.6,
+        "number_of_rooms": 130,
+        "amenities": ["Pool", "Golf Course", "Free Parking", "Spa"],
+        "price_per_night": 260,
+        "occupancy_rate": 77,
+        "details": {
+            "guests": 4,
+            "bedrooms": 2,
+            "beds": 2,
+            "baths": 2
+        }
+    },
+    {
+        "hotel_name": "Lakeside Retreat",
+        "location": "Seattle",
+        "rating": 4.4,
+        "number_of_rooms": 110,
+        "amenities": ["Lake View", "Free Breakfast", "Gym"],
+        "price_per_night": 230,
+        "occupancy_rate": 79,
+        "details": {
+            "guests": 4,
+            "bedrooms": 2,
+            "beds": 2,
+            "baths": 2
+        }
+    },
+    {
+        "hotel_name": "Urban Boutique",
+        "location": "San Francisco",
+        "rating": 4.1,
+        "number_of_rooms": 90,
+        "amenities": ["Free WiFi", "Gym", "Free Breakfast"],
+        "price_per_night": 210,
+        "occupancy_rate": 85,
+        "details": {
+            "guests": 4,
+            "bedrooms": 2,
+            "beds": 2,
+            "baths": 2
+        }
+    },
+    {
+        "hotel_name": "Countryside Escape",
+        "location": "Nashville",
+        "rating": 4.9,
+        "number_of_rooms": 70,
+        "amenities": ["Free WiFi", "Free Parking", "Nature Trails"],
+        "price_per_night": 240,
+        "occupancy_rate": 90,
+        "details": {
+            "guests": 4,
+            "bedrooms": 2,
+            "beds": 2,
+            "baths": 2
+        }
+    }
+]

@@ -1,0 +1,23 @@
+.home-container {
+    
+    height: 100vh; /* Adjust as needed */
+}
+
+.background-container {
+    background-image: url('../../assets/images/icons/Screenshot(117).png');
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Full height */
+    width: 100%; /* Full width */
+ 
+}
+.cox-img{
+    position: relative;
+}
+.cox-text{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+

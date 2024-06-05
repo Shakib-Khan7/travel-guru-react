@@ -1,0 +1,123 @@
+{
+    "tourDestinations": [
+      {
+        "id": 1,
+        "name": "COX'S BAZAR",
+        "country": "France",
+        "description": "An iconic symbol of France, offering panoramic views of COX'S BAZAR.",
+        "attractions": [
+          {
+            "name": "Eiffel Tower",
+            "type": "Monument"
+            
+          },
+          {
+            "name": "Louvre Museum",
+            "type": "Museum",
+            "description": "The world's largest art museum, home to the Mona Lisa and many other masterpieces."
+          }
+        ],
+        "bestTimeToVisit": "April to June, September to November",
+        "averageCost": {
+          "currency": "EUR",
+          "amount": 2000
+        },
+        "image": "https://example.com/images/paris.jpg"
+      },
+      {
+        "id": 2,
+        "name": "SREEMANGAL",
+        "country": "Japan",
+        "description": "Famous for its thousands of red torii gates leading up the mountain.",
+        "attractions": [
+          {
+            "name": "Fushimi Inari Shrine",
+            "type": "Religious Site"
+            
+          },
+          {
+            "name": "Kinkaku-ji",
+            "type": "Temple",
+            "description": "The Golden Pavilion, a Zen Buddhist temple covered in gold leaf."
+          }
+        ],
+        "bestTimeToVisit": "March to May, October to November",
+        "averageCost": {
+          "currency": "JPY",
+          "amount": 250000
+        },
+        "image": "https://example.com/images/kyoto.jpg"
+      },
+      {
+        "id": 3,
+        "name": "SUNDARBAN",
+        "country": "USA",
+        "description": "A symbol of freedom and democracy, located on Liberty Island.",
+        "attractions": [
+          {
+            "name": "Statue of Liberty",
+            "type": "Monument"
+            
+          },
+          {
+            "name": "Central Park",
+            "type": "Park",
+            "description": "A large public park in the center of Manhattan, offering various recreational activities."
+          }
+        ],
+        "bestTimeToVisit": "April to June, September to early November",
+        "averageCost": {
+          "currency": "USD",
+          "amount": 3000
+        },
+        "image": "https://example.com/images/nyc.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Cape Town",
+        "country": "South Africa",
+        "attractions": [
+          {
+            "name": "Table Mountain",
+            "type": "Mountain",
+            "description": "A flat-topped mountain offering stunning views of the city and ocean."
+          },
+          {
+            "name": "Robben Island",
+            "type": "Historical Site",
+            "description": "A UNESCO World Heritage Site, known for its prison where Nelson Mandela was held."
+          }
+        ],
+        "bestTimeToVisit": "March to May, September to November",
+        "averageCost": {
+          "currency": "ZAR",
+          "amount": 35000
+        },
+        "image": "https://example.com/images/capetown.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Sydney",
+        "country": "Australia",
+        "attractions": [
+          {
+            "name": "Sydney Opera House",
+            "type": "Performing Arts Venue",
+            "description": "A world-renowned architectural masterpiece hosting various performances."
+          },
+          {
+            "name": "Bondi Beach",
+            "type": "Beach",
+            "description": "A famous beach known for its golden sands and great surfing conditions."
+          }
+        ],
+        "bestTimeToVisit": "September to November, March to May",
+        "averageCost": {
+          "currency": "AUD",
+          "amount": 4000
+        },
+        "image": "https://example.com/images/sydney.jpg"
+      }
+    ]
+  }
+  
