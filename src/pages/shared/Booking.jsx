@@ -1,30 +1,49 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import ReactDatePicker from 'react-datepicker';
 import DatePicker from "react-datepicker";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContex } from '../../providers/AuthProvider';
 
 const Booking = ({myDestination}) => {
 
+    const {bookingInfo} = useContext(AuthContex)
+    const navigate = useNavigate()
+
     const destination = myDestination.name
+
+    const handleBooking = (e)=>{
+        e.preventDefault()
+        const form = new FormData(e.currentTarget)
+        const origin = form.get('origin')
+        const from = form.get('from')
+        const to = form.get('to')
+        console.log(origin,from,to);
+        bookingInfo(origin,from,to)
+        
+
+
+        navigate(`/hotels/${destination}`)
+
+    }
     
     
     return (
         <div className="hero min-h-96 max-w-2xl bg-slate-100 mx-auto rounded">
             <div className="hero-content text-center">
                 <div className="max-w-md">
-                    <form className="card-body max-w-96 md:max-w-none">
+                    <form onSubmit={handleBooking} className="card-body max-w-96 md:max-w-none">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Origin</span>
                             </label>
-                            <input type="text" className="input input-bordered w-56 md:w-96 text-black" required />
+                            <input type="text" className="input input-bordered w-56 md:w-96 text-black" required name='origin' />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Destination</span>
                             </label>
-                            <input type="text" className="input input-bordered text-black" required disabled placeholder={destination}/>
+                            <input type="text" className="input input-bordered text-black"  readOnly placeholder={destination}/>
 
                         </div>
 
@@ -33,7 +52,7 @@ const Booking = ({myDestination}) => {
                             <label className="label">
                                 <span className="label-text">From</span>
                             </label>
-                            <input type="date" className="input input-bordered text-black" required />
+                            <input type="date" className="input input-bordered text-black" required name='from' />
                             
                             
                             
@@ -44,7 +63,7 @@ const Booking = ({myDestination}) => {
                             <label className="label">
                                 <span className="label-text">To</span>
                             </label>
-                            <input type="date" className="input input-bordered text-black" required />
+                            <input type="date" className="input input-bordered text-black" required name='to' />
 
                         </div>
                         </div>
@@ -60,9 +79,16 @@ const Booking = ({myDestination}) => {
 
 
                         <div className="form-control mt-6">
-                            <Link to={`/hotels/${destination}`}>
-                            <button className='btn btn-warning w-full'>Start booking</button>
-                            </Link>
+                            
+                            
+                            
+                                <button className='btn btn-warning'>
+                                Start Booking
+                                </button>
+                            
+                           
+                            
+                            
                         </div>
                     </form>
 

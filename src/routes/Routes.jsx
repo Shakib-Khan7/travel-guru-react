@@ -6,6 +6,7 @@ import Hotels from "../layout/Hotels";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import PrivateRoute from "./PrivateRoute";
+import MyBooking from "../pages/myBooking/MyBooking";
 
 const routes = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const routes = createBrowserRouter([
         {
           path : '/register',
           element : <Register></Register>
+        },
+        {
+          path : '/mybooking',
+          element : <MyBooking></MyBooking>
         }
         
       ]

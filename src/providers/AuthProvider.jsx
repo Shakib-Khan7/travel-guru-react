@@ -15,6 +15,9 @@ const auth = getAuth(app)
 const AuthProvider = ({children}) => {
     const [user,setUser] = useState(null)
     const [loading,setLoading] = useState(true)
+    const [booking, setBooking] = useState({origin: '', from: '', to: ''});
+
+    const [myBooking,setMyBooking] = useState([])
 
     const createUser = (email,password)=>{
         setLoading(true)
@@ -43,8 +46,45 @@ const AuthProvider = ({children}) => {
         }
     },[])
 
+    const bookingInfo = (origin,from,to) =>{
+        setBooking({origin, from, to});
+    }
 
-    const authInfo = {user,createUser,logOut,logIn,loading}
+    const handleMyBooking = (myHotel)=>{
+        let newMyBooking = [];
+
+        const exists = myBooking.find(hotelName=>hotelName.hotel_name
+            === myHotel.hotel_name
+        )
+
+        if(!exists){
+            newMyBooking = [...myBooking,myHotel]
+            alert('booking confiremd')
+        }
+        else{
+            const remaining = myBooking.filter(hotelName=>hotelName.hotel_name !== myHotel.hotel_name
+            )
+
+            newMyBooking = [...remaining,exists]
+            alert('already booked')
+        }
+
+        
+        setMyBooking(newMyBooking)
+        console.log(newMyBooking);
+        
+    }
+
+
+
+
+
+
+
+
+
+
+    const authInfo = {user,createUser,logOut,logIn,loading,booking,bookingInfo,handleMyBooking,myBooking}
 
 
 

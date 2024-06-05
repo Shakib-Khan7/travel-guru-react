@@ -1,14 +1,20 @@
 import { Rating } from '@smastrom/react-rating';
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaStar } from "react-icons/fa";
+import { AuthContex } from '../providers/AuthProvider';
 
 const Hotel = ({ hotel }) => {
 
     const { hotel_name, details, amenities, price_per_night, rating, img } = hotel
 
+    const {handleMyBooking} = useContext(AuthContex)
+
+
+    
+
     return (
         <div>
-            <div className="card card-side bg-base-100 shadow-xl cursor-pointer">
+            <div className="card card-side bg-base-100 shadow-xl border">
                 <figure><img src={img} alt="Movie" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-3xl font-bold italic">{hotel_name}</h2>
@@ -35,7 +41,9 @@ const Hotel = ({ hotel }) => {
                         <div>
                             <p><span className='font-bold'>${price_per_night}</span>/night</p>
                         </div>
+                        
                     </div>
+                    <button onClick={()=>handleMyBooking(hotel)} className='btn btn-success mt-auto '>Book</button>
 
 
 
