@@ -18,8 +18,9 @@ const Booking = ({myDestination}) => {
         const origin = form.get('origin')
         const from = form.get('from')
         const to = form.get('to')
-        console.log(origin,from,to);
-        bookingInfo(origin,from,to)
+       
+        bookingInfo(origin,from,to,destination)
+        console.log(origin,from,to,destination);
         
 
 

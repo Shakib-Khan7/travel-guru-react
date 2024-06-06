@@ -1,21 +1,41 @@
-import { Rating } from '@smastrom/react-rating';
 import React, { useContext } from 'react';
-import { FaStar } from "react-icons/fa";
 import { AuthContex } from '../providers/AuthProvider';
-import { Link } from 'react-router-dom';
+import { FaStar } from 'react-icons/fa';
 
-const Hotel = ({ hotel }) => {
+const SingleMyBooking = ({myBooked}) => {
 
-    const { hotel_name, details, amenities, price_per_night, rating, img } = hotel
+    const {hotel_name, details, amenities, price_per_night, rating, img} = myBooked
 
-    const {handleMyBooking} = useContext(AuthContex)
-
-
+    const {booking} = useContext(AuthContex)
+    console.log(booking);
     
 
+
     return (
-        <div>
-            <div className="card card-side bg-base-100 shadow-xl border">
+        <div className='border rounded-lg'>
+            <center className='text-3xl text-white font-bold underline mb-4'>Booking details</center>
+
+            <center className=''>
+            <h2 className='text-2xl font-bold text-white '>Origin : {booking.origin}  </h2>
+            <h2 className='text-white font-bold italic'>From : {booking.from}</h2>
+            <h2 className='text-white font-bold italic '>To : {booking.to}</h2>
+            <h2 className='text-2xl font-bold text-white mb-4 '>Destination : {booking.destination}  </h2>
+            </center>
+
+            
+
+
+
+
+            
+            <div className="card card-side text-white shadow-xl
+            
+            
+            ">
+                
+
+
+                <div className='grid grid-cols-1 md:grid-cols-2'>
                 <figure><img src={img} alt="Movie" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-3xl font-bold italic">{hotel_name}</h2>
@@ -44,10 +64,7 @@ const Hotel = ({ hotel }) => {
                         </div>
                         
                     </div>
-                    <Link to='/' className='mt-auto'>
-                    <button onClick={()=>handleMyBooking(hotel)} className='btn btn-success mt-auto w-full '>Book</button>
-                    </Link>
-
+                    
 
 
 
@@ -55,9 +72,10 @@ const Hotel = ({ hotel }) => {
 
                     
                 </div>
+                </div>
             </div>
         </div>
     );
 };
 
-export default Hotel;
+export default SingleMyBooking;

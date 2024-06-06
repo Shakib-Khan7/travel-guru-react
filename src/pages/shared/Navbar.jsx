@@ -30,7 +30,7 @@ const Navbar = () => {
 
             </li>
             <li className=''>
-              <NavLink to='/mybooking'>Bookings</NavLink>
+              <NavLink to='/mybooking'>My Bookings</NavLink>
             </li>
 
             {
@@ -58,7 +58,7 @@ const Navbar = () => {
             <NavLink to='/'>Home</NavLink>
           </li>
           <li className=' text-lg'>
-            <NavLink to='/mybooking'>Bookings</NavLink>
+            <NavLink to='/mybooking'>My Bookings</NavLink>
           </li>
 
           {

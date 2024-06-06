@@ -34,7 +34,7 @@ const routes = createBrowserRouter([
         },
         {
           path : '/mybooking',
-          element : <MyBooking></MyBooking>
+          element : <PrivateRoute><MyBooking></MyBooking></PrivateRoute>
         }
         
       ]
