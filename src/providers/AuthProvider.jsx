@@ -2,6 +2,7 @@
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import React, { createContext, useEffect, useState } from 'react';
 import app from '../firebase/firebase.config';
+import toast from 'react-hot-toast';
 
 
 export const AuthContex = createContext(null)
@@ -16,6 +17,8 @@ const AuthProvider = ({children}) => {
     const [user,setUser] = useState(null)
     const [loading,setLoading] = useState(true)
     const [booking, setBooking] = useState({origin: '', from: '', to: '',destination : ''});
+
+    
 
     const [myBooking,setMyBooking] = useState([])
 
@@ -59,7 +62,7 @@ const AuthProvider = ({children}) => {
 
         if(!exists){
             newMyBooking = [myHotel]
-            alert('booking confiremd')
+            toast.success('Booking Confirmed')
         }
         else{
            //

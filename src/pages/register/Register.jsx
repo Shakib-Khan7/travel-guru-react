@@ -1,8 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContex } from '../../providers/AuthProvider';
+import toast from 'react-hot-toast';
 
 const Register = () => {
+    const [emailError,setEmailError] = useState()
+    const [passwordError,setpasswordError] = useState()
 
     const {createUser} = useContext(AuthContex)
     const navigate = useNavigate()
@@ -14,6 +17,8 @@ const Register = () => {
 
     const handleRegister = e=>{
         e.preventDefault();
+        setEmailError('');
+        setpasswordError('')
         console.log(e.currentTarget);
         const form = new FormData(e.currentTarget)
 
@@ -31,11 +36,17 @@ const Register = () => {
         .then(result=>{
             result.user.displayName = name;
             console.log(result.user);
-            alert('User created')
+            toast.success('Registration complete & you are logged in')
             navigate('/')
         })
         .catch(error=>{
             console.log(error.mesage);
+            if(error.message === 'Firebase: Error (auth/email-already-in-use).'){
+                setEmailError('Email already in use')
+            }
+            else{
+                setpasswordError('Password must be longer than 6 characters')
+            }
         })
 
     }
@@ -86,7 +97,7 @@ const Register = () => {
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                         <center>
-                            
+                            {emailError ? <p className='text-red-500 font-bold italic'>{emailError}</p> : <p className='text-red-500 font-bold italic'>{passwordError}</p>}
                         </center>
                     </div>
                     <div className="form-control mt-6">

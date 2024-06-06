@@ -1,8 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContex } from '../../providers/AuthProvider';
+import toast from 'react-hot-toast';
 
 const Login = () => {
+    const [error, setError] = useState()
 
     const {logIn} = useContext(AuthContex)
 
@@ -15,6 +17,7 @@ const Login = () => {
 
     const handleLogin = e =>{
         e.preventDefault();
+        setError('')
         const form = new FormData(e.currentTarget)
         const email = form.get('email')
         const password = form.get('password')
@@ -25,12 +28,13 @@ const Login = () => {
         logIn(email,password)
         .then(result=>{
             console.log(result.user);
-            alert('successful login')
+            toast.success('Login successful')
             navigate(location?.state ? location.state : '/')
             
         })
         .catch(error=>{
             console.log(error.message);
+            setError('Invalid Email or Password')
         })
 
 
@@ -77,6 +81,13 @@ const Login = () => {
                            
                         </center>
                     </div>
+                    
+                    <center>
+                    {
+                        error && <p className='text-red-500 font-bold italic'>{error}</p>
+                    }
+                    </center>
+                
                     <div className="form-control mt-6">
                         <button className="btn btn-info">Login</button>
                     </div>

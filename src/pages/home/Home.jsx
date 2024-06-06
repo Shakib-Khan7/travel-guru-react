@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from '../shared/Navbar';
 import bg from '../../assets/images/icons/Screenshot(117).png';
 import img1 from '../../assets/images/icons/Sajek.png'
@@ -6,11 +6,15 @@ import img2 from '../../assets/images/icons/Sreemongol.png'
 import img3 from '../../assets/images/icons/sundorbon.png'
 import './Home.css'; // Import a CSS file for additional styling
 import { Link, useLoaderData } from 'react-router-dom';
+import { AuthContex } from '../../providers/AuthProvider';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Home = () => {
+    
    
     return (
         <div className="">
+            
             <div className="">
                 
 
